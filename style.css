@@ -120,6 +120,9 @@ main {
     padding: auto;
     margin-top: -70px;
 }
+.hero-content{
+    margin-top: -50px;
+}
 
 .hero-sub {
     margin: 0;
@@ -162,21 +165,21 @@ main {
 
 /* PRODUCT GRID */
 .product-lines {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 0; 
 }
 
 .line {
     background: #ffffff;
-    border-radius: 18px;
+    border-radius: 0; 
     width: 100%;
-    padding: 28px;
+    padding: 40px 20px; 
     text-align: center;
-    box-shadow: 0 10px 30px rgba(15, 61, 50, 0.04);
+    box-shadow: none; 
     border: 1px solid #eae4d8;
     transition: 0.3s ease;
     display: flex;
@@ -186,32 +189,33 @@ main {
 }
 
 .line:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(15, 61, 50, 0.08);
+    transform: none; 
+    background: #fdfcf9; 
     border-color: #cfa86b;
 }
 
 .line img {
     width: 100%;
-    max-width: 320px;
+    max-width: 450px; 
     height: auto;
     object-fit: contain;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .line h3 {
     margin: 0 0 12px 0;
-    font-size: 1.25rem;
+    font-size: 1.5rem; 
     color: #0b2d25;
     font-weight: 700;
-    min-height: 52px;
+    min-height: auto;
 }
 
 .line p {
-    font-size: 1rem;
+    font-size: 1.1rem; 
     color: #374742;
-    margin-bottom: 15px;
-    min-height: 66px;
+    margin-bottom: 20px;
+    max-width: 500px; 
+    min-height: auto;
 }
 
 .product-volume-tag {
