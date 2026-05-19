@@ -553,3 +553,122 @@ footer p {
     float: right;
     font-size: 1.5rem;
 }
+
+/* RESET PROBLEMATYCZNYCH WARTOŚCI */
+p {
+    font-size: 1rem !important;
+}
+
+/* Responsive HEADER */
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logo-box {
+    width: 150px;
+    height: 120px;
+}
+
+.nav-strip {
+    flex-grow: 1;
+    height: auto;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* TELEFON ≤ 768px */
+@media (max-width: 768px) {
+
+    .logo-box {
+        width: 120px;
+        height: 90px;
+    }
+
+    .nav-strip {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .lang-buttons {
+        margin-top: 10px;
+    }
+
+    .hero-text {
+        font-size: 28px;
+    }
+
+    .hero-sub {
+        font-size: 16px;
+    }
+
+    .product-lines {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .line img {
+        height: 180px;
+    }
+
+    .luxury-wrapper {
+        flex-direction: column;
+    }
+
+    .luxury-image-zone,
+    .luxury-info-zone {
+        padding: 25px;
+    }
+
+    .lux-spec-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .lux-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* MAŁE TELEFONY ≤ 480px */
+@media (max-width: 480px) {
+
+    .logo-box {
+        width: 100px;
+        height: 80px;
+    }
+
+    .hero-text {
+        font-size: 22px;
+    }
+
+    .hero-sub {
+        font-size: 14px;
+    }
+
+    .line img {
+        height: 150px;
+    }
+
+    .lux-title {
+        font-size: 22px;
+    }
+
+    .lux-description {
+        font-size: 14px;
+    }
+
+    .lux-spec-box {
+        padding: 10px 16px;
+    }
+}
