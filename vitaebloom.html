@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaeBloom – WIR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header-container">
+    <div class="logo-box">
+        <img src="logo123.png" alt="logo">
+    </div>
+    
+    <nav class="nav-strip" id="drugi">
+        <div class="nav-links">
+            <a href="index.html" data-it="Home" data-en="Home" data-pl="Główna">Home</a>
+            <a href="chi-siamo.html" data-it="Chi siamo" data-en="About us" data-pl="O nas">Chi siamo</a>
+            <a href="prodotti.html" data-it="Prodotti" data-en="Products" data-pl="Produkty">Prodotti</a>
+            <a href="contatti.html" data-it="Contatti" data-en="Contact" data-pl="Kontakt">Contatti</a>
+            
+        </div>
+        <div class="lang-buttons">
+            <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
+            <button onclick="setLang('it')">IT</button>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('pl')">PL</button>
+            
+        </div>
+    </nav>
+</div>
+<div id="cart-modal">
+    <span class="close-cart" onclick="toggleCart()">&times;</span>
+    <h2 data-it="Il tuo Carrello" data-en="Your Cart" data-pl="Twój Koszyk">Twój Koszyk</h2>
+    <div id="cart-items"></div>
+    <hr>
+    <div class="cart-total-container">
+        Total: <span id="cart-total">0.00</span> €
+</div>
+</div>
+
+<section class="hero">
+    <h1 class="hero-text" data-it="VitaeBloom" data-en="VitaeBloom" data-pl="VitaeBloom">VitaeBloom</h1>
+</section>
+
+<main>
+    <section class="about-home-general">
+        <h2 data-it="Benessere Intimo Moderno" data-en="Modern Intimate Wellness" data-pl="Nowoczesna Higiena Intymna">Benessere Intimo Moderno</h2>
+        <p data-it="La linea VitaeBloom è dedicata al benessere più delicato, formulata con estratti biologici di uva Nero di Troia. Scienza e natura si uniscono per garantire protezione, freschezza e idratazione quotidiana."
+           data-en="The VitaeBloom line is dedicated to the most delicate wellness, formulated with organic Nero di Troia grape extracts. Science and nature combine to guarantee protection, freshness and daily hydration."
+           data-pl="Linia VitaeBloom jest dedykowana najdelikatniejszej pielęgnacji, stworzona na bazie organicznych ekstraktów z winogron Nero di Troia. Nauka i natura łączą się, aby zapewnić ochronę, świeżość i codzienne nawilżenie.">
+           La linea VitaeBloom è dedicata al benessere più delicato, formulata con estratti biologici di uva Nero di Troia. Scienza e natura si uniscono per garantire protezione, freschezza e idratazenie quotidiana.
+        </p>
+    </section>
+
+    <div class="product-lines">
+        
+        <div class="line">
+            <img src="1.jpg" alt="product">
+            <h3>SOOTHING INTIMATE CLEANSER</h3>
+            <p data-it="Una delicata soluzione per l'igiene quotidiana, adatta a tutta la famiglia. Rispetta il pH e la flora cutanea, donando freschezza e comfort. Con moringa, niacinamide e acido lattico, svolge un'azione emolliente, lenitiva e protettiva contro secchezza e fastidi intimi." 
+               data-en="A gentle daily hygiene solution suitable for the whole family. It respects the skin's pH and flora, providing freshness and comfort. With moringa, niacinamide, and lactic acid, it has an emollient, soothing, and protective effect against dryness and intimate discomfort." 
+               data-pl="Delikatny, codzienny środek higieniczny odpowiedni dla całej rodziny. Szanuje pH i florę bakteryjną skóry, zapewniając świeżość i komfort. Dzięki zawartości moringi, niacynamidu i kwasu mlekowego działa zmiękczająco, kojąco i ochronnie, zapobiegając suchości i dyskomfortowi okolic intymnych.">
+               Una delicata soluzione per l'igiene quotidiana, adatta a tutta la famiglia. Rispetta il pH e la flora cutanea, donando freschezza e comfort. Con moringa, niacinamide e acido lattico, svolge un'azione emolliente, lenitiva e protettiva contro secchezza e fastidi intimi.
+            </p>
+            <div class="product-volume-tag">250 ML</div>
+            <a class="btn" href="m001.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="2.jpg" alt="product">
+            <h3>PURIFYING FACIAL CLEANSER</h3>
+            <p data-it="Detergente viso delicato con olio di Moringa. Rimuove trucco e impurità, lasciando la pelle morbida e luminosa. Arricchito con pantenolo e principi activi idratanti, deterge in profondità rispettando l'equilibrio cutaneo." 
+               data-en="Gentle facial cleanser with Moringa oil. Removes makeup and impurities, leaving skin soft and radiant. Enriched with panthenol and hydrating active ingredients, it deeply cleanses while respecting the skin's balance." 
+               data-pl="Delikatny żel do mycia twarzy z olejkiem moringa. Usuwa makijaż i zanieczyszczenia, pozostawiając skórę miękką i promienną. Wzbogacony pantenolem i nawilżającymi składnikami aktywnymi, głęboko oczyszcza, jednocześnie dbając o równowagę skóry.">
+               Detergente viso delicato con olio di Moringa. Rimuove trucco e impurità, lasciando la pelle morbida e luminosa. Arricchito con pantenolo e principi attivi idratanti, deterge in profondità rispettando l'equilibrio cutaneo.
+            </p>
+            <div class="product-volume-tag">125 ML</div>
+            <a class="btn" href="m002.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="3.jpg" alt="product">
+            <h3>3-IN-1 CLEANER</h3>
+            <p data-it="Trattamento viso 3 in 1: deterge, strucca e idrata. Con olio di moringa, pantenolo e attivi idratanti, rimuove le impurità, riduce i rossori e dona luminosità, elasticità e comfort."
+               data-en="3-in-1 facial treatment: cleanses, removes makeup, and moisturizes. With moringa oil, panthenol, and hydrating active ingredients, it removes impurities and makeup, reduces redness, and provides radiance, elasticity, and comfort."
+               data-pl="Zabieg na twarz 3 w 1: oczyszcza, usuwa makijaż i nawilża. Dzięki olejkowi moringa, pantenolowi i składnikom nawilżającym usuwa zanieczyszczenia i makijaż, zmniejsza zaczerwienienia oraz zapewnia blask, elastyczność i komfort.">
+               Trattamento viso 3 in 1: deterge, strucca e idrata. Con olio di moringa, pantenolo e attivi idratanti, rimuove le impurità, riduce i rossori e dona luminosità, elasticità e comfort.
+            </p>
+            <div class="product-volume-tag">100 ML</div>
+            <a class="btn" href="m003.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="4.jpg" alt="product">
+            <h3>DELICATE SOOTHING INTIMATE CLEANSER</h3>
+            <p data-it="Detergente intimo lenitivo per uso quotidiano, adatto a tutta la familia. Con tensioattivi delicati, moringa, niacinamide, inositolo e attivi idratanti, lenisce le irritazioni, rispetta il pH e la flora cutanea."
+               data-en="A soothing intimate wash for daily use, suitable for the whole family. With gentle surfactants, moringa, niacinamide, inositol, and moisturizing active ingredients, it soothes irritation, respects the skin's pH and flora."
+               data-pl="Kojący płyn do higieny intymnej do codziennego stosowania, odpowiedni dla całej rodziny. Dzięki delikatnym środkom powierzchniowo czynnym, morindze, niacynamidowi, inozytolowi i składnikom nawilżającym łagodzi podrażnienia, dba o pH i florę skóry.">
+               Detergente intimo lenitivo per uso quotidiano, adatto a tutta la familia. Con tensioattivi delicati, moringa, niacinamide, inositolo e attivi idratanti, lenisce le irritazioni, rispetta il pH e la flora cutanea.
+            </p>
+            <div class="product-volume-tag">100 ML</div>
+            <a class="btn" href="m004.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="5.jpg" alt="product">
+            <h3>MULTI-ACTIVE FACE CREAM</h3>
+            <p data-it="Crema viso giorno/notte ricca e nutriente con il 99% di ingredienti naturali. Con estratto di moringa, stimola il rinnovamento cellulare, leviga la pelle e combatte i danni dell'inquinamento. Ideale per pelli secche i mature."
+               data-en="A rich and nourishing day/night face cream with 99% natural ingredients. With moringa extract, it stimulates cell turnover, smooths skin, and combats pollution damage. Ideal for dry and mature skin."
+               data-pl="Bogaty i odżywczy krem do twarzy na dzień i na noc, zawierający 99% składników naturalnych. Dzięki ekstraktowi z moringi stymuluje odnowę komórkową, wygładza skórę i przeciwdziała szkodliwemu wpływowi zanieczyszczeń. Idealny dla skóry suchej i dojrzałej.">
+               Crema viso giorno/notte ricca e nutriente con il 99% di ingredienti naturali. Con estratto di moringa, stimola il rinnovamento cellulare, leviga la pelle e combatte i danni dell'inquinamento. Ideale per pelli secche i mature.
+            </p>
+            <div class="product-volume-tag">50 ML</div>
+            <a class="btn" href="m005.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="6.jpg" alt="product">
+            <h3>MULTI-ACTIVE MORINGA FACE CREAM</h3>
+            <p data-it="Trattamento viso 24 ore levigante, antiossidante e nutriente. Con estratti di moringa e formula al 99% naturale, stimola il ricambio cellulare, protegge dai danni ambientali i dona comfort immediato."
+               data-en="A 24-hour smoothing, antioxidant, and nourishing facial treatment. With moringa extracts and a 99% natural formula, it stimulates cell turnover, protects against environmental damage, and provides immediate comfort."
+               data-pl="24-godzinny wygładzający, antyoksydacyjny i odżywczy zabieg na twarz. Dzięki ekstraktom z moringi i w 99% naturalnej formule stymuluje odnowę komórkową, chroni przed szkodliwymi czynnikami zewnętrznymi i zapewnia natychmiastowy komfort.">
+               Trattamento viso 24 ore levigante, antiossidante e nutriente. Con estratti di moringa e formula al 99% naturale, stimola il ricambio cellulare, protegge dai danni ambientali i dona comfort immediato.
+            </p>
+            <div class="product-volume-tag">50 ML</div>
+            <a class="btn" href="m006.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="7.jpg" alt="product">
+            <h3>REGENERATING BODY CREAM</h3>
+            <p data-it="Emulsione leggera e setosa, ideale anche per pelli sensibili. Con acido glicirretico ß-18 e olio di moringa, nutre in profondità, lenisce le irritazioni, riduce i rossori e favorisce la rigenerazione cutanea."
+               data-en="A light and silky emulsion, ideal even for sensitive skin. With ß-18 glycyrrhetic acid and moringa oil, it deeply nourishes, soothes irritation, reduces redness, and promotes skin regeneration."
+               data-pl="Lekka i jedwabista emulsja, idealna również do skóry wrażliwej. Dzięki kwasowi glicyretowemu ß-18 i olejkowi moringa głęboko odżywia, łagodzi podrażnienia, zmniejsza zaczerwienienia i wspomaga regenerację skóry.">
+               Emulsione leggera e setosa, ideale anche per pelli sensibili. Con acido glicirretico ß-18 e olio di moringa, nutre in profondità, lenisce le irritazioni, riduce i rossori e favorisce la rigenerazione cutanea.
+            </p>
+            <div class="product-volume-tag">200 ML</div>
+            <a class="btn" href="m007.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="8.jpg" alt="product">
+            <h3>MORINGEL SKIN SOOTHING</h3>
+            <p data-it="Gel lenitivo a largo spettro con puro estratto di radice e foglia di Moringa oleifera. Calma rossori, prurito e fastidi da punture di insetti, meduse e scottature, donando un sollievo immediato."
+               data-en="A broad-spectrum soothing gel with pure Moringa oleifera root and leaf extract. It soothes redness, itching, and discomfort from insect bites, jellyfish, and stinging, providing immediate relief."
+               data-pl="Żel łagodzący o szerokim spektrum działania z czystym ekstraktem z korzenia i liści Moringa oleifera. Łagodzi zaczerwienienia, swędzenie i dyskomfort spowodowany ukąszeniami owadów, kontaktem z meduzami czy oparzeniami.">
+               Gel lenitivo a largo spettro con puro estratto di radice e foglia di Moringa oleifera. Calma rossori, prurito e fastidi da punture di insetti, meduse e scottature, donando un sollievo immediato.
+            </p>
+            <div class="product-volume-tag">20 ML</div>
+            <a class="btn" href="m008.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="9.jpg" alt="product">
+            <h3>SILKY SHOWER BATH</h3>
+            <p data-it="Detergente corpo delicato e nutriente con estratto di foglie di moringa, glicerina e inulina. Purifica, idrata e rispetta il pH della pelle. L'olio essenziale di menta piperita dona freschezza."
+               data-en="Gentle and nourishing body cleanser with moringa leaf extract, glycerin, and inulin. Purifies, hydrates, and respects skin's pH. Peppermint essential oil provides freshness."
+               data-pl="Delikatny i odżywczy żel do mycia ciała z ekstraktem z liści moringi, gliceryną i inuliną. Oczyszcza, nawilża i dba o odpowiednie pH skóry. Olejek eteryczny z mięty pieprzowej zapewnia świeżość.">
+               Detergente corpo delicato e nutriente con estratto di foglie di moringa, glicerina e inulina. Purifica, idrata e rispetta il pH della pelle. L'olio essenziale di menta piperita dona freschezza.
+            </p>
+            <div class="product-volume-tag">500 ML</div>
+            <a class="btn" href="m009.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="10.jpg" alt="product">
+            <h3>MORINGA RESTRUCTURING SHAMPOO WITH PROBIOTICS AND PHYTOKERATIN</h3>
+            <p data-it="Formula naturale con Moringa del Salento, probiotici e fitocheratina. Rinforza, purifica e protegge. Effetto anticrespo per capelli morbidi e lucenti. Schiuma delicata, profumo erbaseo-fiorito."
+               data-en="Natural formula with Moringa del Salento, probiotics, and phytokeratin. Strengthens, purifies, and protects. Anti-frizz effect for soft, shiny hair. Delicate lather, herbaceous-floral scent."
+               data-pl="Naturalna formuła z dodatkiem Moringa del Salento, probiotyków i fitokeratyny. Wzmacnia, oczyszcza i chroni. Zapewnia efekt przeciw puszeniu się włosów, nadając im miękkość i blask.">
+               Formula naturale con Moringa del Salento, probiotici e fitocheratina. Rinforza, purifica e protegge. Effetto anticrespo per capelli morbidi e lucenti. Schiuma delicata, profumo erbaseo-fiorito.
+            </p>
+            <div class="product-volume-tag">100 ML / 500 ML</div>
+            <a class="btn" href="m010.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+        <div class="line">
+            <img src="11.jpg" alt="product">
+            <h3>RESTRUCTURING SHAMPOO</h3>
+            <p data-it="Formula naturale con Moringa, probiotici e fitocheratina. Lenisce, riequilibra, ristruttura e protegge. Effetto anticrespo per capelli setosi e lucenti. Testato su pelli sensibili."
+               data-en="Natural formula with Moringa, probiotics, and phytokeratin. Soothes, rebalances, restructures, and protects. Anti-frizz effect for silky, shiny hair. Tested on sensitive skin."
+               data-pl="Naturalna formuła z moringą, probiotykami i fitokeratyną. Łagodzi, przywraca równowagę, odbudowuje i chroni. Działa przeciw puszeniu się włosów, pozostawiając je jedwabiste i lśniące.">
+               Formula naturale con Moringa, probiotici e fitocheratina. Lenisce, riequilibra, ristruttura e protegge. Effetto anticrespo per capelli setosi e lucenti. Testato su pelli sensibili.
+            </p>
+            <div class="product-volume-tag">300 ML</div>
+            <a class="btn" href="m011.html" data-it="Dettagli" data-en="Details" data-pl="Szczegóły">Dettagli</a>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <b><p data-it="Contatti" data-en="Contact" data-pl="Kontakt">Contatti</p></b>
+    <b><p>Email: info@wir-innovation.it</p></b>
+    <b><p data-it="© WIR – Tutti i diritti riservati" 
+       data-en="© WIR – All rights reserved" 
+       data-pl="© WIR – Wszelkie prawa zastrzeżone">
+       © 2026 WIR – Tutti i diritti riservati
+    </p></b>
+</footer>
+
+<script>
+function setLang(lang) {
+    const elements = document.querySelectorAll('[data-it]');
+    elements.forEach(el => {
+        const translation = el.getAttribute('data-' + lang);
+        if (translation) {
+            el.innerHTML = translation;
+        }
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem('selectedLang', lang);
+}
+window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLang') || 'it';
+    setLang(savedLang);
+});
+</script>
+<script>
+    let cart = JSON.parse(localStorage.getItem('wir_cart')) || [];
+
+    function toggleCart() {
+        const modal = document.getElementById('cart-modal');
+        modal.classList.toggle('active');
+    }
+
+    document.getElementById('cart-btn').onclick = toggleCart;
+
+    function addToCart(name, price) {
+        const item = cart.find(i => i.name === name);
+        item ? item.qty++ : cart.push({ name, price, qty: 1 });
+        updateCart();
+    }
+
+    function removeFromCart(name) {
+        cart = cart.filter(i => i.name !== name);
+        updateCart();
+    }
+
+    function updateCart() {
+        const container = document.getElementById('cart-items');
+        const countEl = document.getElementById('cart-count');
+        const totalEl = document.getElementById('cart-total');
+        
+        container.innerHTML = '';
+        let total = 0, count = 0;
+
+        cart.forEach(item => {
+            total += item.price * item.qty;
+            count += item.qty;
+            container.innerHTML += `
+                <div class="cart-item">
+                    <div><strong>${item.name}</strong><br>${item.qty} x ${item.price} €</div>
+                    <button onclick="removeFromCart('${item.name}')" class="remove-btn">✕</button>
+                </div>`;
+        });
+
+        countEl.innerText = count;
+        totalEl.innerText = total.toFixed(2);
+        localStorage.setItem('wir_cart', JSON.stringify(cart));
+    }
+    window.onload = updateCart;
+</script>
+
+</body>
+</html>

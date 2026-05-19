@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti – WIR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header-container">
+    <div class="logo-box">
+        <img src="logo123.png" alt="logo">
+    </div>
+    
+    <nav class="nav-strip" id="drugi">
+        <div class="nav-links">
+            <a href="index.html" data-it="Home" data-en="Home" data-pl="Główna">Home</a>
+            <a href="chi-siamo.html" data-it="Chi siamo" data-en="About us" data-pl="O nas">Chi siamo</a>
+            <a href="prodotti.html" data-it="Prodotti" data-en="Products" data-pl="Produkty">Prodotti</a>
+            <a href="contatti.html" data-it="Contatti" data-en="Contact" data-pl="Kontakt">Contatti</a>
+        </div>
+        <div class="lang-buttons">
+            <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
+            <button onclick="setLang('it')">IT</button>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('pl')">PL</button>
+        </div>
+    </nav>
+</div>
+<div id="cart-modal">
+    <span class="close-cart" onclick="toggleCart()">&times;</span>
+    <h2 data-it="Il tuo Carrello" data-en="Your Cart" data-pl="Twój Koszyk">Il tuo Carrello</h2>
+    <div id="cart-items"></div>
+    <hr>
+    <div class="cart-total-container">
+        <p data-it="Il totale:" data-en="Total:" data-pl="Razem:"></p> <span id="cart-total">0.00</span> €
+    </div>
+    <a class="btn checkout-btn" href="ordine.html" data-it="Ordina ora" data-en="Order now" data-pl="Zamów teraz">Ordina ora</a>
+</div>
+<section class="hero">
+    <a class="btn-lux-secondary" href="index.html" data-it="↩ Torna alla Home" data-en="↩ Back to Home" data-pl="↩ Powrót do strony głównej">↩ Torna alla Home</a>
+    <h1 class="hero-text" data-it="Contatti" data-en="Contact Us" data-pl="Kontakt">Kontakty</h1>
+</section>
+
+<section class="about-home-general">
+    <h2 data-it="Mettiti in contatto con noi" data-en="Get in touch with us" data-pl="Skontaktuj się z nami">Skontaktuj się z nami</h2>
+    <p data-it="Siamo a tua disposizione dla qualsiasi informazione sui nostri prodotti."
+       data-en="We are at your disposal for any information about our products."
+       data-pl="Jesteśmy do Twojej dyspozycji w przypadku jakichkolwiek pytań dotyczących naszych produktów.">
+       Siamo a tua disposizione per qualsiasi informazione sui nostri prodotti.
+    </p>
+     <h1><b><p>Email: info@wir-innovation.it</p></b></h1>
+</section>
+
+<footer>
+    <b><p data-it="Contatti" data-en="Contact" data-pl="Kontakt">Contatti</p></b>
+    <b><p>Email: info@wir-innovation.it</p></b>
+    <b><p data-it="© WIR – Tutti i diritti riservati" 
+       data-en="© WIR – All rights reserved" 
+       data-pl="© WIR – Wszelkie prawa zastrzeżone">
+       © 2026 WIR – Tutti i diritti riservati
+    </p></b>
+</footer>
+
+<script>
+function setLang(lang) {
+    const elements = document.querySelectorAll('[data-it]');
+    elements.forEach(el => {
+        const translation = el.getAttribute('data-' + lang);
+        if (translation) {
+            el.innerHTML = translation;
+        }
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem('selectedLang', lang);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('selectedLang') || 'it';
+    setLang(savedLang);
+});
+</script>
+<script>
+    let cart = JSON.parse(localStorage.getItem('wir_cart')) || [];
+
+    function toggleCart() {
+        const modal = document.getElementById('cart-modal');
+        modal.classList.toggle('active');
+    }
+
+    document.getElementById('cart-btn').onclick = toggleCart;
+
+    function addToCart(name, price) {
+        const item = cart.find(i => i.name === name);
+        item ? item.qty++ : cart.push({ name, price, qty: 1 });
+        updateCart();
+    }
+
+    function removeFromCart(name) {
+        cart = cart.filter(i => i.name !== name);
+        updateCart();
+    }
+
+    function updateCart() {
+        const container = document.getElementById('cart-items');
+        const countEl = document.getElementById('cart-count');
+        const totalEl = document.getElementById('cart-total');
+        
+        container.innerHTML = '';
+        let total = 0, count = 0;
+
+        cart.forEach(item => {
+            total += item.price * item.qty;
+            count += item.qty;
+            container.innerHTML += `
+                <div class="cart-item">
+                    <div><strong>${item.name}</strong><br>${item.qty} x ${item.price} €</div>
+                    <button onclick="removeFromCart('${item.name}')" class="remove-btn">✕</button>
+                </div>`;
+        });
+
+        countEl.innerText = count;
+        totalEl.innerText = total.toFixed(2);
+        localStorage.setItem('wir_cart', JSON.stringify(cart));
+    }
+    window.onload = updateCart;
+</script>
+</body>
+</html>

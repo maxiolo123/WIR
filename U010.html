@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VULVAR SERUM – WIR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header-container">
+    <div class="logo-box">
+        <img src="logo123.png" alt="logo">
+    </div>
+     
+    <nav class="nav-strip" id="drugi">
+        <div class="nav-links">
+            <a href="index.html" data-it="Home" data-en="Home" data-pl="Główna">Home</a>
+            <a href="chi-siamo.html" data-it="Chi siamo" data-en="About us" data-pl="O nas">Chi siamo</a>
+            <a href="prodotti.html" data-it="Prodotti" data-en="Products" data-pl="Produkty">Prodotti</a>
+            <a href="contatti.html" data-it="Contatti" data-en="Contact" data-pl="Kontakt">Contatti</a>
+        
+        </div>
+        <div class="lang-buttons">
+            <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
+            <button onclick="setLang('it')">IT</button>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('pl')">PL</button>
+        </div>
+    </nav>
+</div>
+<div id="cart-modal">
+    <span class="close-cart" onclick="toggleCart()">&times;</span>
+    <h2 data-it="Il tuo Carrello" data-en="Your Cart" data-pl="Twój Koszyk">Il tuo Carrello</h2>
+    <div id="cart-items"></div>
+    <hr>
+    <div class="cart-total-container">
+        <p data-it="Il totale:" data-en="Total:" data-pl="Razem:"></p> <span id="cart-total">0.00</span> €
+    </div>
+    <a class="btn checkout-btn" href="ordine.html" data-it="Ordina ora" data-en="Order now" data-pl="Zamów teraz">Ordina ora</a>
+</div>
+    
+<main class="luxury-product-container">
+     <a class="btn-lux-secondary" href="armoniavitae.html" data-it="↩ Torna ai Prodotti" data-en="↩ Back to Products" data-pl="↩ Powrót do produktów">↩ Torna ai Prodotti</a>
+    <div class="luxury-wrapper"> 
+        <div class="luxury-image-zone">
+            <img src="u10.png" alt="VULVAR SERUM">
+        </div>
+        <div class="luxury-info-zone">
+            <span class="lux-badge">LINEA UVIA</span>
+            <h1 class="lux-title">VULVAR SERUM</h1>
+            
+            <div class="lux-spec-grid">
+                <div class="lux-spec-box">
+                    <small data-it="Codice" data-en="Code" data-pl="Kod">Codice</small>
+                    <span>U010</span>
+                </div>
+                <div class="lux-spec-box">
+                    <small data-it="Volume" data-en="Volume" data-pl="Pojemność">Volume</small>
+                    <span>30 ML</span>
+                </div>
+            </div>
+
+            <div class="lux-description">
+                <p data-it="Un innovativo siero intimo che fornisce elasticità, benessere e protezione all'area vulvare e peri-vulvare. Contiene estratto brevettato di vinacce di Nero di Troia biologico, con proprietà antiossidanti, antinfiammatorie e antisettiche dimostrate. Ideale per combattere infiammazioni, odori e segni dell'invecchiamento, offrendo una cura completa della pelle intima." 
+                   data-en="An innovative intimate serum that provides elasticity, well-being, and protection to the vulvar and peri-vulvar area. Contains patented organic Nero di Troia pomace extract, with proven antioxidant, anti-inflammatory, and antiseptic properties. Ideal for combating inflammation, odor, and signs of aging, offering comprehensive intimate skincare." 
+                   data-pl="Innowacyjne serum do pielęgnacji intymnej, które zapewnia elastyczność, dobre samopoczucie i ochronę okolic sromu i wokół sromu. Zawiera opatentowany organiczny ekstrakt z wytłoków Nero di Troia, o udowodnionych właściwościach antyoksydacyjnych, przeciwzapalnych i antyseptycznych. Idealne do zwalczania stanów zapalnych, nieprzyjemnego zapachu i oznak starzenia, oferując kompleksową pielęgnację intymną.">
+                </p>
+                <b><div class="price">55.00 €</div></b>
+            </div>
+
+            <div class="lux-trust-badges">
+                <div class="badge-item"><span class="badge-icon">🇮🇹</span><span data-it="Made in Italy" data-en="Made in Italy" data-pl="Wyprodukowano we Włoszech">Made in Italy</span></div>
+                <div class="badge-item"><span class="badge-icon">🌿</span><span data-it="Bio Estratti" data-en="Organic Extracts" data-pl="Bio Ekstrakty">Bio Estratti</span></div>
+                <div class="badge-item"><span class="badge-icon">🔬</span><span data-it="Testato" data-en="Tested" data-pl="Przebadany">Testato</span></div>
+            </div>
+
+            <div class="lux-actions">
+                <a class="btn-lux-tertiary" href="contatti.html" data-it="Richiedi Informazioni" data-en="Inquire Now" data-pl="Zapytaj o produkt">Richiedi Informazioni</a>
+    <input type="number" id="prod-qty" value="1" min="1" style="width: 50px; padding: 10px; margin-right: 10px; border-radius: 5px; border: 1px solid #ccc;">
+<button class="btn-lux-primary" onclick="addWithQuantity('VULVAR SERUM', 55.00)" data-it="Aggiungi al carrello" data-en="Add to cart" data-pl="Dodaj do koszyka">Aggiungi al carrello</button>
+        </div>
+    </div>
+</div>
+</main>
+<footer>
+    <b><p data-it="Contatti" data-en="Contact" data-pl="Kontakt">Contatti</p></b>
+    <b><p>Email: info@wir-innovation.it</p></b>
+    <b><p data-it="© WIR – Tutti i diritti riservati" 
+       data-en="© WIR – All rights reserved" 
+       data-pl="© WIR – Wszelkie prawa zastrzeżone">
+       © 2026 WIR – Tutti i diritti riservati
+    </p></b>
+</footer>
+
+<script>
+function setLang(lang) {
+    const elements = document.querySelectorAll('[data-it]');
+    elements.forEach(el => {
+        const translation = el.getAttribute('data-' + lang);
+        if (translation) el.innerHTML = translation;
+    });
+    document.documentElement.lang = lang;
+    localStorage.setItem('selectedLang', lang);
+}
+window.addEventListener('DOMContentLoaded', () => { setLang(localStorage.getItem('selectedLang') || 'it'); });
+</script>
+<script>
+    let cart = JSON.parse(localStorage.getItem('wir_cart')) || [];
+
+    function toggleCart() {
+        const modal = document.getElementById('cart-modal');
+        modal.classList.toggle('active');
+    }
+
+    document.getElementById('cart-btn').onclick = toggleCart;
+
+    function addToCart(name, price, qty = 1) {
+        const item = cart.find(i => i.name === name);
+        if (item) {
+            item.qty += qty;
+        } else {
+            cart.push({ name, price, qty: qty });
+        }
+        updateCart();
+        document.getElementById('cart-modal').classList.add('active');
+    }
+
+    function removeFromCart(name) {
+        cart = cart.filter(i => i.name !== name);
+        updateCart();
+    }
+
+    function updateCart() {
+        const container = document.getElementById('cart-items');
+        const countEl = document.getElementById('cart-count');
+        const totalEl = document.getElementById('cart-total');
+
+        container.innerHTML = '';
+        let total = 0, count = 0;
+
+        cart.forEach(item => {
+            total += item.price * item.qty;
+            count += item.qty;
+            container.innerHTML += `
+                <div class="cart-item">
+                    <div><strong>${item.name}</strong><br>${item.qty} x ${item.price} €</div>
+                    <button onclick="removeFromCart('${item.name}')" class="remove-btn">✕</button>
+                </div>`;
+        });
+
+        countEl.innerText = count;
+        totalEl.innerText = total.toFixed(2);
+        localStorage.setItem('wir_cart', JSON.stringify(cart));
+    }
+
+    window.onload = updateCart;
+
+    function addWithQuantity(name, price) {
+        const qtyInput = document.getElementById('prod-qty');
+        let quantity = parseInt(qtyInput && qtyInput.value, 10);
+        if (!Number.isFinite(quantity) || quantity < 1) quantity = 1;
+        addToCart(name, price, quantity);
+    }
+</script>
+</body>
+</html>
+
+
+
+
