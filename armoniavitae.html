@@ -14,19 +14,31 @@
         <img src="logo123.png" alt="logo">
     </div>
     
-    <nav class="nav-strip" id="drugi">
+     <nav class="nav-strip" id="drugi">
         <div class="nav-links">
             <a href="index.html" data-it="Home" data-en="Home" data-pl="Główna">Home</a>
-            <a href="chi-siamo.html" data-it="Chi siamo" data-en="About us" data-pl="O nas">O nas</a>
-            <a class="active" href="prodotti.html" data-it="Prodotti" data-en="Products" data-pl="Produkty">Produkty</a>
-            <a href="contatti.html" data-it="Contatti" data-en="Contact" data-pl="Kontakt">Kontakty</a>
+            <a href="chi-siamo.html" data-it="Chi siamo" data-en="About us" data-pl="O nas">Chi siamo</a>
+            <a href="prodotti.html" data-it="Prodotti" data-en="Products" data-pl="Produkty">Prodotti</a>
+            <a href="contatti.html" data-it="Contatti" data-en="Contact" data-pl="Kontakt">Contatti</a>
         </div>
         <div class="lang-buttons">
+            <button id="cart-btn">🛒 <span id="cart-count">0</span></button>
             <button onclick="setLang('it')">IT</button>
             <button onclick="setLang('en')">EN</button>
             <button onclick="setLang('pl')">PL</button>
         </div>
     </nav>
+</div>
+<div id="cart-modal">
+    <span class="close-cart" onclick="toggleCart()">&times;</span>
+    <h2 data-it="Il tuo Carrello" data-en="Your Cart" data-pl="Twój Koszyk">Il tuo Carrello</h2>
+    <div id="cart-items"></div>
+    <hr>
+    <div class="cart-total-container">
+        <p data-it="Il totale:" data-en="Total:" data-pl="Razem:"></p> <span id="cart-total">0.00</span> €
+    </div>
+    <a class="btn checkout-btn" href="ordine.html" data-it="Ordina ora" data-en="Order now" data-pl="Zamów teraz">Ordina ora</a>
+</div>
 </div>
 
 <section class="hero">
